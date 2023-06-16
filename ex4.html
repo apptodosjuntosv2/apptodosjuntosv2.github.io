@@ -1,0 +1,18 @@
+<html>
+    <head>
+         <script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython.js"       crossorigin="anonymous">
+         </script>
+         <script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js"        crossorigin="anonymous">
+         </script>
+    </head>
+    <body onload="brython()">
+        <input id="zone">
+        <script type="text/python">
+        from browser import document, alert
+        def echo(event):
+            alert(document["zone"].value)
+        document["mybutton"].bind("click", echo)
+        </script>
+        <button id="mybutton">click !</button>
+    </body>
+</html>
