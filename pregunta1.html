@@ -13,7 +13,7 @@
    }
    button{
     background-color: gold;
-    width:20%;
+    width:100%;
     height:100%;
     font-size:2vw;
     color: green;
@@ -27,8 +27,8 @@
     display: block;
    }
    .pregunta {
-    width:40%;
-    height:40%;
+    width:20%;
+    height:20%;
     border:9px solid #1b6b6f;
     padding:12px;
    }
@@ -40,12 +40,15 @@
   <center>
   <h1 style="margin-top:60px;font-size:5vw">Pregunta 1.<br>¿Cu&aacute;l es el segmento?</h1>
   <br>
-  <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:90% 100%;"><tr><td><img class="pregunta" src="pregunta1_500x500.png"></td></tr><tr><td ><div id="img_home"></div></td><td><div id="img_home2"></div></td><td><div id="img_home3"></div></td><td><div id="img_home4"></div></td></tr></table>
-  <button onclick="addimageazul()" type="button"><img src="azul.svg"></button>
-  <button onclick="addimageamarillo()" type="button"><img src="amarillo.svg"></button>
-  <button onclick="addimagerojo()" type="button"><img src="rojo.svg"></button>
-  <button onclick="addimageverde()" type="button"><img src="verde.svg"></button>
-  <button onclick="siguiente()" type="button"><img src="siguiente.svg"></button>
+  <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:90% 100%;">
+  <tr><td><img class="pregunta" src="pregunta1_500x500.png"></td>
+  <td><button onclick="addimageazul()" type="button"><img src="azul.svg"></button></td>
+  <td><button onclick="addimageamarillo()" type="button"><img src="amarillo.svg"></button></td>
+  <td><button onclick="addimagerojo()" type="button"><img src="rojo.svg"></button></td>
+  <td><button onclick="addimageverde()" type="button"><img src="verde.svg"></button></td>
+  <td><button onclick="siguiente()" type="button"><img src="siguiente.svg"></button></td></td></tr>
+  <tr><td ><div id="img_home"></div></td><td><div id="img_home2"></div></td>
+  <td><div id="img_home3"></div></td><td><div id="img_home4"></div></td></tr></table>
   </center>
     <script>
 function addimageazul() {
