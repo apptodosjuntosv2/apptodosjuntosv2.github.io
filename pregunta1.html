@@ -40,18 +40,36 @@
   <center>
   <h1 style="margin-top:60px;font-size:5vw">Pregunta 1.<br>¿Cu&aacute;l es el segmento?</h1>
   <br>
-  <table class="centerTable" ><tr><td><img class="pregunta" src="pregunta1_500x500.png"></td><td width: 8%;></td><td style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:60% 100%;   width: 60%; height: 100%;"><div id="img_home"></div></td></tr></table>
+  <table class="centerTable" ><tr><td><img class="pregunta" src="pregunta1_500x500.png"></td><td width: 8%;></td><td style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:12% 100%;   width: 12%; height: 100%;"><div id="img_home"></div></td><td style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:12% 100%;   width: 12%; height: 100%;"><div id="img_home2"></div></td><td style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:12% 100%;   width: 12%; height: 100%;"><div id="img_home3"></div></td><td style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:12% 100%;   width: 12%; height: 100%;"><div id="img_home4"></div></td></tr></table>
   <button onclick="addimageazul()" type="button"><img src="azul.svg"></button>
   <button onclick="addimageamarillo()" type="button"><img src="amarillo.svg"></button>
   <button onclick="addimagerojo()" type="button"><img src="rojo.svg"></button>
   <button onclick="addimageverde()" type="button"><img src="verde.svg"></button>
-  <button onclick="siguientepregunta()" type="button"><img src="siguiente.svg"></button>
+  <button onclick="siguiente()" type="button"><img src="siguiente.svg"></button>
   </center>
     <script>
 function addimageazul() {
     var img = new Image();
     img.src = "azul.svg"
     img_home.appendChild(img);
+}
+function addimageamarillo() {
+    var img = new Image();
+    img.src = "amarillo.svg"
+    img_home2.appendChild(img);
+}
+function addimagerojo() {
+    var img = new Image();
+    img.src = "rojo.svg"
+    img_home3.appendChild(img);
+}
+function addimageverde() {
+    var img = new Image();
+    img.src = "verde.svg"
+    img_home4.appendChild(img);
+}
+  function siguiente() {
+    window.open("./pregunta2.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400"); 
 }
 </script>  
 </body>
