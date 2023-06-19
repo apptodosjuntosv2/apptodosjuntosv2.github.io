@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
         * Method that updates the countdown and the sample
         */
-        function updateCountdown() {
+        function updateCountdown(REMAINING_SECONDS=20) {
             // Calcs
             const NOW = new Date()
             const DURATION = DATE_TARGET - NOW;
@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function Display() {
         document.getElementById("seconds").style.color = "#FFD700";
+        updateCountdown(REMAINING_SECONDS=0);
 } 
 </script>  
 </body>
