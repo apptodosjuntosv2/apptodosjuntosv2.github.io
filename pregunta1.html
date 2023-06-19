@@ -32,8 +32,27 @@
     border:1px solid #1b6b6f;
     padding:2px;
    }
-    .centerTable {  width: 70%; height: 150% ; margin: 3px auto; }
-
+   .centerTable {  width: 70%; height: 150% ; margin: 3px auto; }
+   table{
+    background-color: gold;
+    outline: solid;
+    border-radius: 2em;
+    padding: 0.4em 2em;
+    }
+   td{
+    font-size:81px;
+    text-align: left;
+    cursor: default;
+    color: green;
+    }
+   p {
+    width: 120px;
+    background-color: #eeeeee;
+    font-size:30px;
+    text-align: left;
+    cursor: default;
+    color: green;
+    }
   </style>
 </head>
 <body>
@@ -44,6 +63,12 @@
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td> 
+  </tr>
+  <tr>
+  <p> segundos</p>
+  <table>
+  <tr><td><span id="seconds"></span></td></tr>
+  </table>
   </tr>
   </table>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
@@ -88,6 +113,46 @@ function addimageverde() {
     var win = window.open(url, "_blank");
     win.focus();
 }
+    document.addEventListener('DOMContentLoaded', () => { 
+
+      //===
+      // VARIABLES
+       //===
+      const DATE_TARGET = new Date();
+      // DOM for render
+      const SPAN_SECONDS = document.querySelector('span#seconds');
+      // Milliseconds for the calculations
+      const MILLISECONDS_OF_A_SECOND = 1000;
+      const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+        //===
+        // FUNCTIONS
+        //===
+        /**
+        * Method that updates the countdown and the sample
+        */
+      function updateCountdown() {
+          // Calcs
+          const NOW = new Date()
+          const DURATION = DATE_TARGET - NOW;
+          const REMAINING_SECONDS = 20-Math.abs(Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND))%20;
+           // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
+           // Render
+          SPAN_SECONDS.textContent = REMAINING_SECONDS;
+      }
+
+        //===
+        // INIT
+        //===
+      updateCountdown();
+      // Refresh every second
+      let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+      if (time == 0){
+          clearInterval(time);
+          time = 0;
+          return 0;
+        };
+    });
+    </script>
 </script>  
 </body>
 </html>
