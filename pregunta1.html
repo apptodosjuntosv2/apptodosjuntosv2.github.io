@@ -141,11 +141,11 @@ function addimageverde() {
         // INIT
         //===
         updateCountdown();
-        // Refresh every second
-        let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-        if (time==0) {
+        if (updateCountdown().REMAINING_SECONDS==0) {
             document.body.innerHTML = document.getElementById("cuentgareg").innerHTML.replace('<table id="cuentgareg"><tr><td><span id="seconds"></span></td><td><p> segundos</p></td></tr></table>', '<table id="cuentgareg"><tr><td> 0 </td><td><p> segundos</p></td></tr></table>');
         }
+        // Refresh every second
+        setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
     });
 </script>  
 </body>
