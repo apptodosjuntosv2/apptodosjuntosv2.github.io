@@ -62,7 +62,7 @@
   <table>
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
-  <table id="cuentgareg"><tr><td><span id="seconds"></span></td><td><p> segundos</p></td></tr></table>
+  <td><span id="seconds"></span></td><td><p> segundos</p><button onclick = "Display()">fin</button></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td> 
   </tr>
   </table>
@@ -104,11 +104,11 @@ function addimageverde() {
     img_home4.appendChild(img);
 }
     url="./pregunta2.html"
-  function siguiente(url) {
+function siguiente(url) {
     var win = window.open(url, "_blank");
     win.focus();
 }
-      document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => { 
 
         //===
         // VARIABLES
@@ -143,7 +143,13 @@ function addimageverde() {
         updateCountdown();
         // Refresh every second
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-    });
+});
+function Display() {
+         document.open( "text/html", "replace");
+         document.write( "<span id="seconds"></span>", "0");
+         document.close();
+}
+    
 </script>  
 </body>
 </html>
