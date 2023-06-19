@@ -53,6 +53,7 @@
     cursor: default;
     color: green;
     }
+   .ctareg { background-color: #ffffff; }
   </style>
 </head>
 <body>
@@ -62,11 +63,11 @@
   <table>
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
-  <td><span id="seconds"></span>&nbsp;&nbsp;&nbsp;</td>
-  <td><button onclick = "Display()">fin</button></td>
+    <td><button onclick = "Display()">fin</button></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td>
   </tr>
   </table>
+  <p class="ctareg"><span id="seconds"></span>&nbsp;&nbsp;&nbsp;</p>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
   <tr>
   <td><button onclick="addimageamarillo()" type="button" style="background-color:#fff000">Amarillo</button></td>
@@ -146,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 });
 function Display() {
-        document.getElementById("seconds").style.color = "#FFD700";
+        document.getElementById("seconds").style.color = "#ffffff";
 } 
 </script>  
 </body>
