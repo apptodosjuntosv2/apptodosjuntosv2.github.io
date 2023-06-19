@@ -81,7 +81,33 @@
   </tr>
   </table>
   </center>
-    <script>
+  <script>
+function addimageamarillo() {
+    var img = new Image();
+    img.src = "amarillo.svg"
+    img_home.appendChild(img);
+}
+function addimageazul() {
+    var img = new Image();
+    img.src = "azul.svg"
+    img_home2.appendChild(img);
+}
+
+function addimagerojo() {
+    var img = new Image();
+    img.src = "rojo.svg"
+    img_home3.appendChild(img);
+}
+function addimageverde() {
+    var img = new Image();
+    img.src = "verde.svg"
+    img_home4.appendChild(img);
+}
+    url="./pregunta2.html"
+  function siguiente(url) {
+    var win = window.open(url, "_blank");
+    win.focus();
+}
     document.addEventListener('DOMContentLoaded', () => { 
 
       //===
@@ -115,33 +141,6 @@
       updateCountdown();
       // Refresh every second
       let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-function addimageamarillo() {
-    var img = new Image();
-    img.src = "amarillo.svg"
-    img_home.appendChild(img);
-}
-function addimageazul() {
-    var img = new Image();
-    img.src = "azul.svg"
-    img_home2.appendChild(img);
-}
-
-function addimagerojo() {
-    var img = new Image();
-    img.src = "rojo.svg"
-    img_home3.appendChild(img);
-}
-function addimageverde() {
-    var img = new Image();
-    img.src = "verde.svg"
-    img_home4.appendChild(img);
-}
-    url="./pregunta2.html"
-  function siguiente(url) {
-    var win = window.open(url, "_blank");
-    win.focus();
-}
-
 </script>  
 </body>
 </html>
