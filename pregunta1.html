@@ -9,13 +9,14 @@
    button{
     width:100%;
     height:100%;
-    font-size:4vw;
+    font-size:3vw;
+    color: #919191;
     outline: solid;
     border-radius: 2em;
    }
-   button:active {
+   button:active:hover{
     background-color: #515151;
-  }
+    border-color: red;}
 
    img {
     width:50%;
@@ -24,8 +25,8 @@
     display:block;
    }
    .pregunta {
-    width:30%;
-    height:30%;
+    width:40%;
+    height:40%;
     border:1px solid #1b6b6f;
     padding:2px;
    }
@@ -43,7 +44,6 @@
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td> 
   </tr>
   </table>
-  <br>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
   <tr>
   <td><button onclick="addimageamarillo()" type="button" style="background-color:#fff000">Amarillo</button></td>
