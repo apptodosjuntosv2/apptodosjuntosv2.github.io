@@ -62,13 +62,8 @@
   <table>
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
+  <td><p> segundos</p></td><td><span id="seconds"></span></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td> 
-  </tr>
-  <tr>
-  <p> segundos</p>
-  <table>
-  <tr><td><span id="seconds"></span></td></tr>
-  </table>
   </tr>
   </table>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
@@ -120,12 +115,6 @@
       updateCountdown();
       // Refresh every second
       let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-      if (time == 0){
-          clearInterval(time);
-          time = 0;
-          return 0;
-        };
-
 function addimageamarillo() {
     var img = new Image();
     img.src = "amarillo.svg"
