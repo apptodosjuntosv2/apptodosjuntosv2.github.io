@@ -62,7 +62,7 @@
   <table>
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
-  <td><p> segundos</p></td><td><span id="seconds"></span></td>
+  <td><span id="seconds"></span></td><td><p> segundos</p></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td> 
   </tr>
   </table>
@@ -144,7 +144,7 @@ function addimageverde() {
         // Refresh every second
         let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
         if (time==0) {
-            return Math.atan(time)
+            Math.atan(time)
         }
     });
 </script>  
