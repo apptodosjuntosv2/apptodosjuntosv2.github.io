@@ -7,16 +7,18 @@
     margin: auto;
    }
    button{
-    background-color: gold;
-    width:60%;
+    width:100%;
     height:200%;
     font-size:6vw;
-    color: green;
     outline: solid;
     border-radius: 2em;
    }
+   .button:active {
+    background-color: #e9ddb1;
+  }
+
    img {
-    width:25%;
+    width:50%;
     height:50%;
     margin: auto;
     display:block;
@@ -44,10 +46,10 @@
   <br>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
   <tr>
-  <td><button onclick="addimageazul()" type="button" background-color="#0019c2"></button></td>
-  <td><button onclick="addimageamarillo()" type="button"><img src="amarillo.svg"></button></td>
-  <td><button onclick="addimagerojo()" type="button"><img src="rojo.svg"></button></td>
-  <td><button onclick="addimageverde()" type="button"><img src="verde.svg"></button></td>
+  <td><button onclick="addimageazul()" type="button" background-color="#0019c2"><img src="azul.svg"></button></td>
+  <td><button onclick="addimageamarillo()" type="button" background-color="#fff000"><img src="amarillo.svg"></button></td>
+  <td><button onclick="addimagerojo()" type="button" background-color="#ff0000"><img src="rojo.svg"></button></td>
+  <td><button onclick="addimageverde()" type="button" background-color="#00ff1b"><img src="verde.svg"></button></td>
   </tr>
   <tr>
   <td><div id="img_home"></div></td>
