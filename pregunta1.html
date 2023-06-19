@@ -62,7 +62,7 @@
   <table>
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
-  <td><span id="seconds"></span>     </td>
+  <td><span id="seconds"></span>&nbsp;&nbsp;&nbsp;</td>
   <td><button onclick = "Display()">fin</button></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td>
   </tr>
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
         * Method that updates the countdown and the sample
         */
-        function updateCountdown(REMAINING_SECONDS=20) {
+        function updateCountdown() {
             // Calcs
             const NOW = new Date()
             const DURATION = DATE_TARGET - NOW;
