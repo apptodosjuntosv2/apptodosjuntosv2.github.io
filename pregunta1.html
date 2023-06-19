@@ -8,8 +8,8 @@
    }
    button{
     width:100%;
-    height:200%;
-    font-size:6vw;
+    height:500%;
+    font-size:20vw;
     outline: solid;
     border-radius: 2em;
    }
@@ -46,10 +46,10 @@
   <br>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
   <tr>
-  <td><button onclick="addimageamarillo()" type="button" style="background-color:#fff000"></button></td>
-  <td><button onclick="addimageazul()" type="button" style="background-color:#0019c2"></button></td>
-  <td><button onclick="addimagerojo()" type="button" style="background-color:#ff0000"></button></td>
-  <td><button onclick="addimageverde()" type="button" style="background-color:#00ff1b"></button></td>
+  <td><button onclick="addimageamarillo()" type="button" style="background-color:#fff000">Amarillo</button></td>
+  <td><button onclick="addimageazul()" type="button" style="background-color:#0019c2">Azul</button></td>
+  <td><button onclick="addimagerojo()" type="button" style="background-color:#ff0000">Rojo</button></td>
+  <td><button onclick="addimageverde()" type="button" style="background-color:#00ff1b">Verde</button></td>
   </tr>
   <tr>
   <td><div id="img_home"></div></td>
@@ -60,16 +60,17 @@
   </table>
   </center>
     <script>
-function addimageazul() {
-    var img = new Image();
-    img.src = "azul.svg"
-    img_home.appendChild(img);
-}
 function addimageamarillo() {
     var img = new Image();
     img.src = "amarillo.svg"
+    img_home.appendChild(img);
+}
+function addimageazul() {
+    var img = new Image();
+    img.src = "azul.svg"
     img_home2.appendChild(img);
 }
+
 function addimagerojo() {
     var img = new Image();
     img.src = "rojo.svg"
