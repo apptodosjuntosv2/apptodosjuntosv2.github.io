@@ -62,7 +62,7 @@
   <table>
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
-  <td><span id="seconds"></span></td><td><p> segundos</p><button onclick = "Display()">fin</button></td>
+  <td><span id="seconds">segundos</span></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td> 
   </tr>
   </table>
@@ -144,12 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Refresh every second
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 });
-function Display() {
-         document.open( "text/html", "replace");
-         document.write( "<span id="seconds"></span>");
-         document.close();
-}
-    
+ 
 </script>  
 </body>
 </html>
