@@ -108,39 +108,42 @@ function addimageverde() {
     var win = window.open(url, "_blank");
     win.focus();
 }
-    document.addEventListener('DOMContentLoaded', () => { 
+      document.addEventListener('DOMContentLoaded', () => { 
 
-      //===
-      // VARIABLES
-       //===
-      const DATE_TARGET = new Date();
-      // DOM for render
-      const SPAN_SECONDS = document.querySelector('span#seconds');
-      // Milliseconds for the calculations
-      const MILLISECONDS_OF_A_SECOND = 1000;
-      const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+        //===
+        // VARIABLES
+        //===
+        const DATE_TARGET = new Date();
+        // DOM for render
+        const SPAN_SECONDS = document.querySelector('span#seconds');
+        // Milliseconds for the calculations
+        const MILLISECONDS_OF_A_SECOND = 1000;
+        const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+        
         //===
         // FUNCTIONS
         //===
+
         /**
         * Method that updates the countdown and the sample
         */
-      function updateCountdown() {
-          // Calcs
-          const NOW = new Date()
-          const DURATION = DATE_TARGET - NOW;
-          const REMAINING_SECONDS = 20-Math.abs(Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND))%20;
-           // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
-           // Render
-          SPAN_SECONDS.textContent = REMAINING_SECONDS;
-      }
+        function updateCountdown() {
+            // Calcs
+            const NOW = new Date()
+            const DURATION = DATE_TARGET - NOW;
+            const REMAINING_SECONDS = 20-Math.abs(Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND))%20;
+            // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
+            // Render
+            SPAN_SECONDS.textContent = REMAINING_SECONDS;
+        }
 
         //===
         // INIT
         //===
-      updateCountdown();
-      // Refresh every second
-      let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+        updateCountdown();
+        // Refresh every second
+        let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+    });
 </script>  
 </body>
 </html>
