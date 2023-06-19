@@ -135,9 +135,6 @@ function addimageverde() {
             // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
             // Render
             SPAN_SECONDS.textContent = REMAINING_SECONDS;
-            if (updateCountdown().REMAINING_SECONDS==0) {
-                SPAN_SECONDS.textContent = 0;
-            }
         }
 
         //===
@@ -146,6 +143,9 @@ function addimageverde() {
         updateCountdown();
         // Refresh every second
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+        if (updateCountdown().REMAINING_SECONDS==0;) {
+            setInterval(updateCountdown().REMAINING_SECONDS=0;, MILLISECONDS_OF_A_SECOND);;
+        }
     });
 </script>  
 </body>
