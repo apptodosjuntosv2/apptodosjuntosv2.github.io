@@ -40,13 +40,13 @@
     padding: 0.4em 2em;
     }
    td{
-    font-size:60px;
+    font-size:80px;
     text-align: left;
     cursor: default;
     color: green;
     }
    p {
-    width: 60px;
+    width: 80px;
     background-color: #eeeeee;
     font-size:30px;
     text-align: left;
@@ -67,7 +67,7 @@
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td>
   </tr>
   </table>
-  <p class="ctareg"><span id="seconds"></span>&nbsp;&nbsp;&nbsp;</p>
+  <p class="ctareg"><span id="seconds"></span>&nbsp;segundos</p>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
   <tr>
   <td><button onclick="addimageamarillo()" type="button" style="background-color:#fff000">Amarillo</button></td>
@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function Display() {
         document.getElementById("seconds").style.color = "#ffffff";
+        document.getElementById("ctareg").style.color = "#ffffff";
 } 
 </script>  
 </body>
