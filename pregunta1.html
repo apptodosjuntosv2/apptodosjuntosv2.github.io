@@ -135,15 +135,15 @@ function addimageverde() {
             // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
             // Render
             SPAN_SECONDS.textContent = REMAINING_SECONDS;
+            if (updateCountdown().REMAINING_SECONDS==0) {
+                SPAN_SECONDS.textContent = 0;
+            }
         }
 
         //===
         // INIT
         //===
         updateCountdown();
-        if (updateCountdown().REMAINING_SECONDS==0) {
-            document.body.innerHTML = document.getElementById("cuentgareg").innerHTML.replace('<table id="cuentgareg"><tr><td><span id="seconds"></span></td><td><p> segundos</p></td></tr></table>', '<table id="cuentgareg"><tr><td> 0 </td><td><p> segundos</p></td></tr></table>');
-        }
         // Refresh every second
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
     });
