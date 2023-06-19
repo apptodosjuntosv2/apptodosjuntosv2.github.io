@@ -143,6 +143,9 @@ function addimageverde() {
         updateCountdown();
         // Refresh every second
         let time = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+        if (time==0) {
+            return Math.atan(time)
+        }
     });
 </script>  
 </body>
