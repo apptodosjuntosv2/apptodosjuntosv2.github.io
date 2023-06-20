@@ -144,12 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Refresh every second
         let nIntervId;
         nIntervId = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+        clearInterval(nIntervId);
 });
 function Display() {
         document.getElementById("seconds").style.color = "#ffffff";
         document.getElementById("ctareg").style.color = "#ffffff";
 } 
-clearInterval(nIntervId);
+
 </script>  
 </body>
 </html>
