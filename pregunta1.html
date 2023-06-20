@@ -136,15 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
             // Render
             SPAN_SECONDS.textContent = REMAINING_SECONDS;
+            if (SPAN_SECONDS.textContent==15){
+                document.getElementById("seconds").style.color = "#ffffff";
+                document.getElementById("ctareg").style.color = "#ffffff";
+            }
         }
-
         //===
         // INIT
         //===
         updateCountdown();
-        if (SPAN_SECONDS.textContent==15){
-            Display()
-        }
         // Refresh every second
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 });
