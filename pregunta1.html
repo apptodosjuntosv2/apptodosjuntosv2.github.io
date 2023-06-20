@@ -63,12 +63,17 @@
   <table>
   <tr>
   <td><img class="pregunta" src="pregunta1_399x396.png"></td>
-    <td><button onclick = "Display()">fin</button></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td>
   </tr>
   </table>
   <p class="ctareg">segundos: <span id="seconds"></span></p>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
+  <tr>
+  <td><button onclick="addimageamarillo()" type="button" style="background-color:#fff000">Amarillo</button></td>
+  <td><button onclick="addimageazul()" type="button" style="background-color:#0019c2">Azul</button></td>
+  <td><button onclick="addimagerojo()" type="button" style="background-color:#ff0000">Rojo</button></td>
+  <td><button onclick="addimageverde()" type="button" style="background-color:#00ff1b">Verde</button></td>
+  </tr>
   <tr>
   <td><div id="img_home"></div></td>
   <td><div id="img_home2"></div></td>
@@ -137,6 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // INIT
         //===
         updateCountdown();
+        if (updateCountdown()==15){
+            Display()
+        }
         // Refresh every second
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 });
