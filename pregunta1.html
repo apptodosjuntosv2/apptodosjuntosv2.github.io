@@ -136,22 +136,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
             // Render
             SPAN_SECONDS.textContent = REMAINING_SECONDS;
-            if (SPAN_SECONDS.textContent==15){
-                document.getElementById("seconds").style.color = "#ffffff";
-                document.getElementById("ctareg").style.color = "#ffffff";
-            }
         }
         //===
         // INIT
         //===
         updateCountdown();
         // Refresh every second
-        setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+        let nIntervId;
+        nIntervId = setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 });
 function Display() {
         document.getElementById("seconds").style.color = "#ffffff";
         document.getElementById("ctareg").style.color = "#ffffff";
 } 
+clearInterval(nIntervId);
 </script>  
 </body>
 </html>
