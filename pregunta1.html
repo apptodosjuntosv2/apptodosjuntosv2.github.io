@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Calcs
             const NOW = new Date()
             const DURATION = DATE_TARGET - NOW;
-            const REMAINING_SECONDS = Math.exp(-0.001*20+0.001*Math.abs(Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND))%20);
+            const REMAINING_SECONDS = Math.exp(3-0.2*DURATION);
             // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
             // Render
             SPAN_SECONDS.textContent = REMAINING_SECONDS;
