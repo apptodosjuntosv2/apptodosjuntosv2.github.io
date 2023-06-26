@@ -7,16 +7,16 @@
     margin: auto;
    }
    button{
-    width:10vw;
-    height:4vw;
+    width:6vw;
+    height:3vw;
     font-size: 2vw;
     color: #919191;
     outline: solid;
     border-radius: 2em;
    }
    button:hover{
-    width:10vw;
-    height:4vw;
+    width:6vw;
+    height:3vw;
     background-color: gold;
     background-color: rgba(0,0,0,.30);
     color: #515151;
@@ -58,7 +58,7 @@
     width:20vw;
     height:20vw;
     background: url("pregunta1.svg") no-repeat;
-    background-size: 10vw 20vw;
+    background-size: 20vw 20vw;
     color: #919191;
     outline: solid;
     border-radius: 2em;    
@@ -79,13 +79,17 @@
   <center>
   <h1 style="margin-top:54px;font-size:3vw">Pregunta 1.<br>¿Cu&aacute;l es el segmento?</h1>
   <br>
+  <p class="ctareg">Cuenta atrás: <span id="seconds"></span></p>
+  <table><tr>
+  <td>
   <table class="pregunta">
   <tr>
   <td><button class="pre" onclick="Display()"></button></td>
   <td><button onclick="siguiente()"><img src="siguiente.svg"></button></td>
   </tr>
   </table>
-  <p class="ctareg">Cuenta atrás: <span id="seconds"></span></p>
+  </td>
+  <td>
   <table class="centerTable" style="background-image: linear-gradient(red, yellow);background-repeat:no-repeat;background-size:100% 100%;">
   <tr>
   <td><button onclick="addimageamarillo()" type="button" style="background-color:#fff000">Amarillo</button></td>
@@ -99,6 +103,8 @@
   <td><div id="img_home3"></div></td>
   <td><div id="img_home4"></div></td>
   </tr>
+  </table>
+  </td></tr>
   </table>
   </center>
   <script>
